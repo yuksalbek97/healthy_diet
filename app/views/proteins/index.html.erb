@@ -1,0 +1,4 @@
+<h1>Proteins</h1>
+<% @proteins.each do |u| %>
+<%= link_to u.name,  protein_path(u.id) %> <br>
+<% end %>    

@@ -1,0 +1,11 @@
+<h1>Create new carb</h1>
+
+<%= form_for @carb do |p| %>
+<%= p.label :name %>
+<%= p.text_field :name %>
+
+<%= p.label :cal_per_gram %>
+<%= p.number_field :cal_per_gram %>
+
+<%= p.submit %>
+<% end %>

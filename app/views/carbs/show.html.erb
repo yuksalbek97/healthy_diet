@@ -1,0 +1,7 @@
+<h1>Show carbs</h1>
+<h2><%= @carb.name %></h2>
+<h3>Calories per gram = <%= @carb.cal_per_gram%></h3>
+<h4>Who also tried <%= @carb.name %> : <% @result.each do |r| %>
+<%= r.user.name %> <br>
+<% end %>
+</h4>

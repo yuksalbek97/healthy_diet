@@ -1,0 +1,8 @@
+<h1>Show proteins</h1>
+<h2><%= @protein.name %></h2>
+<h3>Calories per gram = <%= @protein.cal_per_gram%></h3>
+<h4>Who also tried <%= @protein.name %> : <% @result.each do |r| %>
+<%= r.user.name %> <br>
+<% end %>
+</h4>
+

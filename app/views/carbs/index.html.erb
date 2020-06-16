@@ -1,0 +1,5 @@
+<h1>Carbs</h1>
+
+<% @carbs.each do |u| %>
+<%= link_to u.name,  carb_path(u.id) %> <br>
+<% end %>    
