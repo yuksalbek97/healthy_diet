@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  vegetabble: one
+  protein: one
+  carb: one
+
+two:
+  user: two
+  vegetabble: two
+  protein: two
+  carb: two
