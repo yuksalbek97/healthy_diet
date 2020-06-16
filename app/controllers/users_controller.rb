@@ -10,21 +10,24 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    
-end
+    redirect_to user_path(@user.id)
+  end
 
   def update
-    @user = .find(params[:id])
+    @user = User.find(params[:id])
+    @user.update
+
+    redirect_to user_path(@user.id)
   end
 
   def edit
     @user = User.find(params[:id])
   end
 
-  def destroy
-     user = User.find(params[:id])
-     User.d
-  end
+  # def destroy
+  #    @user = User.find(params[:id])
+  #    @user.destroy
+  # end
 
   private 
 
