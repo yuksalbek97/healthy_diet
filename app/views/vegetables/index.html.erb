@@ -1,0 +1,10 @@
+<h1>Index of vege </h1>
+
+<address>Vegetables are important sources of many nutrients, including potassium, dietary fiber, folate (folic acid), vitamin A, and vitamin C. 
+    Diets rich in potassium may help to maintain healthy blood pressure. As part of an overall healthy diet, eating foods such as vegetables 
+    that are lower in calories per cup instead of some other higher-calorie food may be useful in helping to lower calorie intake.</address>
+
+<% @vegetables.each do |v| %>
+<ol><i><%= link_to v.name, vegetable_path(v.id) %> </i><br></ol>
+<% end %>
+

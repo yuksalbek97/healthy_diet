@@ -24,6 +24,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def calculator_calories
+    @user = User.find
+
+  end
+
   # def destroy
   #    @user = User.find(params[:id])
   #    @user.destroy

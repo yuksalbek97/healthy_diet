@@ -1,0 +1,12 @@
+<h1>Show of vege</h1>
+
+<h2><%= @vegetable.name %></h2>
+<h3>Calories per 1g = <%= @vegetable.cal_per_gram %>.</h3>
+<h4>Who also tryed <%= @vegetable.name %> : <% @result.each do |r|%>
+    <%= r.user.name %><br>
+<% end %>
+</h4>
+
+
+
+

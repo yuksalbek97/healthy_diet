@@ -28,15 +28,15 @@ Result.destroy_all
   Protein.create(name: "Pork", vegetarian: false, cal_per_gram:19)
 
   puts "creating_users"
-  5.times do
+  25.times do
     User.create(name: Faker::Name.first_name, password: "password",  age: rand(18..80), gender: Faker::Gender.binary_type, weight: rand(90..350), height: rand(5.0..6.7), email: Faker::Internet.email )
    end
    puts "creating_vegetables"
-   5.times do
+   25.times do
        Vegetable.create(name: Faker::Food.vegetables, cal_per_gram: rand(1..3))
    end
 
-   5.times do 
+   25.times do 
     Result.create(user_id: User.all.sample.id, vegetable_id: Vegetable.all.sample.id, carb_id: Carb.all.sample.id, protein_id: Protein.all.sample.id )
 
    end

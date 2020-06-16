@@ -1,0 +1,15 @@
+<h1>New vege!</h1>
+
+<i><h2>"You can add new vegetable if you want, the only information we need is calories per gram!"</h2></i>
+
+
+<%= form_for @vegetable do |f| %>
+<h2><%= f.label :name %>
+<%= f.text_field :name %> <br>
+<%= f.label :calories_per_gram %>
+<%= f.number_field :cal_per_gram %><br>
+<%= f.submit "Add Vege" %> </h2>
+<% end %>
+
+
+<h1>Yamm!</h1>
