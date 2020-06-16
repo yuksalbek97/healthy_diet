@@ -17,4 +17,13 @@ class User < ApplicationRecord
         
 
     end
+
+    def product_calculator()
+        
+        
+    end
+
+
+
+
 end
