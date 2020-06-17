@@ -11,5 +11,7 @@ Height: <%= @user.height.round(2) %> </h3>
 
 
 
+
+
 <%= button_to "Delete", { action: "destroy", id: @user.id },
                                 method: :delete, data: { confirm: "Are you sure?" } %>

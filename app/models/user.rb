@@ -5,25 +5,8 @@ class User < ApplicationRecord
     has_many :carbs, through: :results
     has_many :vegetables, through: :results
 
-
-    def calories_calculator
-        = @user[age] *
-        = @user[weight] *
-        = @user[height]*
-    
-    end
-
-    def food_calculator(calories)
-        
-
-    end
-
-    def product_calculator()
-        
-        
-    end
-
-
+    validates :name, uniqueness: true
+    validates :email, uniqueness: true
 
 
 end

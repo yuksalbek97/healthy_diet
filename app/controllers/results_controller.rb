@@ -9,16 +9,17 @@ class ResultsController < ApplicationController
     
     def create
         @result = Result.create(result_params)
-        
+
+        redirect_to user_path(@result.user)
     end
     
-    def edit
-        @result = Result.find(params[:id])
-    end
+    # def edit
+    #     @result = Result.find(params[:id])
+    # end
     
-    def update
+    # def update
     
-    end
+    # end
     
     def show
         @result = Result.find(params[:id])
