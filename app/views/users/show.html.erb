@@ -1,8 +1,10 @@
-<h1>Show page</h1>
 
 
 
-<%= @user.name %>
-<%= @user.age %>
-<%= @user.weight %>
-<%= @user.height %>
+
+
+<h1>User show</h1>
+<% if flash[:error] %>
+  <h1 style="color: red;"><%= flash[:error] %></h1>
+<% end %>
+<h1><%= @user.name %></h1>

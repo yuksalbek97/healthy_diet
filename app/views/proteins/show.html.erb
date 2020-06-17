@@ -1,3 +1,4 @@
+ <% #if session[:view_count].to_i <= 3 %>
 <h1>Show proteins</h1>
 <h2><%= @protein.name %></h2>
 <h3>Calories per gram = <%= @protein.cal_per_gram%></h3>
@@ -5,4 +6,6 @@
 <%= r.user.name %> <br>
 <% end %>
 </h4>
+
+
 

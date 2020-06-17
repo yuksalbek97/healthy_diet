@@ -5,6 +5,14 @@ class ProteinsController < ApplicationController
       end
     
       def show
+
+        
+        #if session[:view_count] 
+         #   session[:view_count] = session[:view_count].to_i + 1
+        #else
+        #    session[:view_count] = 1
+        #end
+
         @protein = Protein.find(params[:id])
         @result = @protein.results.to_a
       end

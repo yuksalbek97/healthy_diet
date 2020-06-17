@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+ ul {
+    background-color: lightgray;
+  }
+  
+  ul li {
+    display: inline-block;
+    padding: 20px;
+    color: black;
+  }
+  
+  li:hover {
+    background-color: rgb(177, 254, 255);
+    transition-duration: 1s;
+  }
+  
+  .right {
+    float: right;
+  }
+  © 2020 GitHub, Inc.

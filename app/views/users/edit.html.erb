@@ -1,1 +1,22 @@
 <h1>Edit page</h1>
+
+
+<%= form_for @user do |p| %>
+
+<%= p.label :age %>
+<%= p.number_field :age %> <br>
+
+<%= p.radio_button(:gender, "Male") %>
+<%= p.label(:gender, "Male") %>
+<%= p.radio_button(:gender, "Female") %>
+<%= p.label(:gender, "Female") %> <br>
+
+<%= p.label :weight %>
+<%= p.number_field :weight %> <br>
+
+<%= p.label :height %>
+<%= p.number_field :height %> <br>
+
+ 
+
+<% end %>

@@ -1,5 +1,9 @@
+<% #if cookies[:view_count].to_i <= 3 %>
+
 <h1>Index</h1>
 
 <% @users.each do |u| %>
 <%= link_to u.name, user_path(u.id) %> <br>
 <% end %>    
+
+

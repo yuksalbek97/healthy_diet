@@ -33,7 +33,6 @@ class CarbsController < ApplicationController
         @carb = Carb.find(params[:id])
         @carb.destroy
         redirect_to carb_path
-
       end
 
       private
