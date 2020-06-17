@@ -1,0 +1,13 @@
+<h1>create new result</h1>
+<h2>Please type your daily calories: </h2>
+
+<h2>Please choose form above: </h2>
+<h3>
+<%= form_for @result do |f| %>
+PROTEIN: <%= f.collection_select :protein_id, Protein.all, :id, :name %> || <i><%= link_to "CUSTOMIZE", new_protein_path(@protein) %></i> <br>
+CARB: <%= f.collection_select :carb_id, Carb.all, :id, :name %> || <i><%= link_to "CUSTOMIZE", new_carb_path(@carb) %> </i> <br>
+VEGETABLE: <%= f.collection_select :vegetable_id, Vegetable.all, :id, :name %> || <i><%= link_to "CUSTOMIZE", new_vegetable_path(@vegetable) %> </i> <br>
+
+</h3>
+<%= f.submit %>
+<% end %>

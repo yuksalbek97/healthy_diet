@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -8,3 +9,22 @@
   <h1 style="color: red;"><%= flash[:error] %></h1>
 <% end %>
 <h1><%= @user.name %></h1>
+=======
+<h1>Welcome <%= @user.name %>!<br></h1>
+<h2><i> Here are some informations about you, </i></h2>
+
+
+
+<h3>
+Name: <%= @user.name %><br>
+Age: <%= @user.age %><br>
+Weight: <%= @user.weight %><br>
+Height: <%= @user.height.round(2) %> </h3>
+
+
+
+
+
+<%= button_to "Delete", { action: "destroy", id: @user.id },
+                                method: :delete, data: { confirm: "Are you sure?" } %>
+>>>>>>> 206668cc3a6655b227a49c39dff3a93b3f08dc02
