@@ -8,9 +8,11 @@ class ResultsController < ApplicationController
     end
     
     def create
+        
         @result = Result.create(result_params)
-
-        redirect_to user_path(@result.user)
+    
+       
+        redirect_to result_path(@result)
     end
     
     # def edit
@@ -32,7 +34,7 @@ class ResultsController < ApplicationController
 private 
 
 def result_params
-    params.require(:result).permit(:user_id, :vegetable_id, :protein_id, :carb_id)
+    params.require(:result).permit(:user_id, :vegetable_id, :protein_id, :carb_id, :calories_per_meal)
 end
 
 end

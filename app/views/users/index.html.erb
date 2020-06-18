@@ -1,9 +1,17 @@
 <% #if cookies[:view_count].to_i <= 3 %>
 
-<h1>Index</h1>
+<h2>Find your friends :</h2>
+<p>"Having a sense of community <strong>unites us</strong>. Being a part of a community 
+    can make us feel as though we are a part of something <strong>greater</strong> than ourselves.<br>
+    It can give us opportunities to connect with people, to reach for our <strong>goals</strong>, 
+    and makes us feel safe and secure".</p>
+
+
+    <h3>Check out your friend's calories score, but <mark>please, do not edit not-your profile</mark>, that would end friendship...</h3>
+
 
 <% @users.each do |u| %>
-<%= link_to u.name, user_path(u.id) %> <br>
+<p><li><i><%= link_to u.name, user_path(u.id) %> </i><br></li></p>
 <% end %>    
 
 

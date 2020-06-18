@@ -5,12 +5,17 @@ class User < ApplicationRecord
     has_many :carbs, through: :results
     has_many :vegetables, through: :results
 
-<<<<<<< HEAD
-    
-=======
     validates :name, uniqueness: true
     validates :email, uniqueness: true
 
 
->>>>>>> 206668cc3a6655b227a49c39dff3a93b3f08dc02
+def calculator
+ if self.gender == "Male"
+    sum = 66 + (6.3 * self.weight) + (12.9 * self.height) - (6.8 * self.age) + 400
+ else
+    sum = 655 + (4.3 * self.weight) + (4.7 * self.height) - (4.7 * self.age) + 300
+end
+sum
+end
+
 end

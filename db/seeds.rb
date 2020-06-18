@@ -1,9 +1,10 @@
 require 'faker'
+Result.destroy_all
 Carb.destroy_all
 Protein.destroy_all
 User.destroy_all
 Vegetable.destroy_all
-Result.destroy_all
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -37,6 +38,6 @@ Result.destroy_all
    end
 
    25.times do 
-    Result.create(user_id: User.all.sample.id, vegetable_id: Vegetable.all.sample.id, carb_id: Carb.all.sample.id, protein_id: Protein.all.sample.id )
+    Result.create(user_id: User.all.sample.id, vegetable_id: Vegetable.all.sample.id, carb_id: Carb.all.sample.id, protein_id: Protein.all.sample.id, calories_per_meal: rand(500..2000))
 
    end

@@ -1,4 +1,4 @@
-<h1>Edit page</h1>
+<h1>We need just few more informations: </h1>
 
 
 <%= form_for @user do |p| %>
@@ -15,8 +15,8 @@
 <%= p.number_field :weight %> <br>
 
 <%= p.label :height %>
-<%= p.number_field :height %> <br>
+<%= p.number_field :height %> <br><br>
 
- 
+<%= p.submit "Done" %>
 
 <% end %>

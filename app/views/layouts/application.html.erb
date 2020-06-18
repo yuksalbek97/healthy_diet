@@ -11,9 +11,10 @@
 
   <body>
     <ul>
-      <li><%= link_to 'Home', users_path %></li>
-      <li><%= link_to 'Calorie Calculator', edit_user_path(params[:id]) %></li>
-      <li> <%= link_to 'Proteins Home'%></li>
+      <li><%= link_to 'Friends', users_path%></li>
+     <li><%= link_to 'Proteins', proteins_path%></li>
+      <li><%= link_to 'Carbs', carbs_path%></li>
+      <li><%= link_to 'Vegetables', vegetables_path %></li>
   
 
       <% if @current_user %>
@@ -21,7 +22,7 @@
         <li class='right'><%= link_to "Log-Out", logout_path, method: :delete %></li>
       <% else %>
         <li class='right'><%= link_to 'Sign-up', new_user_path %></li>
-        <li class='right'><%= link_to 'Login', new_protein_path %></li>
+        <li class='right'><%= link_to 'Login', new_login_path %></li>
       <% end %>
     </ul>
 

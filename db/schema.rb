@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_233732) do
+ActiveRecord::Schema.define(version: 2020_06_17_164100) do
 
   create_table "carbs", force: :cascade do |t|
     t.string "name"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_233732) do
     t.integer "carb_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "calories_per_meal"
     t.index ["carb_id"], name: "index_results_on_carb_id"
     t.index ["protein_id"], name: "index_results_on_protein_id"
     t.index ["user_id"], name: "index_results_on_user_id"

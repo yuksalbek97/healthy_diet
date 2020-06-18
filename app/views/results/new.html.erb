@@ -1,13 +1,22 @@
-<h1>create new result</h1>
-<h2>Please type your daily calories: </h2>
+<h3><i>"Think of your plate containing three sections: vegetables, carbs, and proteins. 
+    Vegetables should fill half the plate and carb and protein should fill the other half of the plate. 
+    Eat a wide variety of vegetables in every color to ensure a range of nutrients".</i></h3>
+   
 
 <h2>Please choose form above: </h2>
 <h3>
 <%= form_for @result do |f| %>
-PROTEIN: <%= f.collection_select :protein_id, Protein.all, :id, :name %> || <i><%= link_to "CUSTOMIZE", new_protein_path(@protein) %></i> <br>
-CARB: <%= f.collection_select :carb_id, Carb.all, :id, :name %> || <i><%= link_to "CUSTOMIZE", new_carb_path(@carb) %> </i> <br>
-VEGETABLE: <%= f.collection_select :vegetable_id, Vegetable.all, :id, :name %> || <i><%= link_to "CUSTOMIZE", new_vegetable_path(@vegetable) %> </i> <br>
+Proteins: <%= f.collection_select :protein_id, Protein.all, :id, :name %> || <i><h5><%= link_to "CUSTOMIZE", new_protein_path(@protein) %></h5></i> <br>
+Carbs: <%= f.collection_select :carb_id, Carb.all, :id, :name %> || <i><h5><%= link_to "CUSTOMIZE", new_carb_path(@carb) %></h5> </i> <br>
+Vegetable: <%= f.collection_select :vegetable_id, Vegetable.all, :id, :name %> || <i><h5><%= link_to "CUSTOMIZE", new_vegetable_path(@vegetable) %></h5> </i> <br>
+
+<%= f.hidden_field :user_id, value: session[:user_id]%>
+
+
+<%= f.label :calories_per_meal %>
+<%= f.number_field :calories_per_meal %> (500 - 2000)
 
 </h3>
 <%= f.submit %>
 <% end %>
+
